@@ -1,3 +1,13 @@
+*Please be aware that this library / application / sample is provided as a community project without any guarantee of support*
+=========================================================
+
+[![](https://jitpack.io/v/ltrudu/WindevMobilePrintConnectWrapper.svg)](https://jitpack.io/#ltrudu/WindevMobilePrintConnectWrapper)
+[![](https://jitpack.io/v/ltrudu/WindevMobilePrintConnectWrapper/month.svg)](https://jitpack.io/#ltrudu/WindevMobilePrintConnectWrapper)
+
+
+#WindevMobilePrintConnectWrapper
+
+
 # END USER LICENSE AGREEMENT (UNRESTRICTED SOFTWARE)
 
 
