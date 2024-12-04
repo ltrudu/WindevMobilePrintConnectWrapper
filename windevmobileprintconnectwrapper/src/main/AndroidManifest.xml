@@ -1,3 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zebra.windevmobileprintconnectwrapper">
+    <queries>
+        <package android:name='com.zebra.printconnect' />
+    </queries>
 </manifest>

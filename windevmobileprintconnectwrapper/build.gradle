@@ -5,16 +5,16 @@ plugins {
 ext {
     PUBLISH_GROUP_ID = 'com.zebra.windevmobileprintconnectwrapper'
     PUBLISH_ARTIFACT_ID = 'windevmobileprintconnectwrapper'
-    PUBLISH_VERSION = '0.1'
+    PUBLISH_VERSION = '0.2'
 }
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
     defaultConfig {
         minSdkVersion 30
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 1
-        versionName "0.1"
+        versionName "0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -39,5 +39,5 @@ afterEvaluate {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.github.ltrudu:PrintConnectIntentsWrapper:+'
+    implementation 'com.github.ltrudu:PrintConnectIntentsWrapper:0.2'
 }
