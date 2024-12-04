@@ -229,7 +229,7 @@ public class PrintConnectWindevMobileFacade {
         });
     }
 
-    public void PrintConnectImprimeTexte(final String texteAImprimer, final String fsCallbackSucces, final String fsCallbackError)
+    public void PrintConnectImprimePasstrough(final String texteAImprimer, final String fsCallbackSucces, final String fsCallbackError)
     {
         PCPassthroughPrint passthroughPrint = new PCPassthroughPrint(getActivity());
 
@@ -281,7 +281,7 @@ public class PrintConnectWindevMobileFacade {
         });
     }
 
-    public void PrintConnectImprimeFichierTemplateVariable(final String fsFichierAImprimer, final String fsFileMode, final String fsVariableDataKeysCommaSeparatedString, final String fsVariableDataValuesCommaSeparatedString, final String fsCallbackSucces, final String fsCallbackError)
+    public void PrintConnectImprimeFichierTemplateVariable(final String fsFichierAImprimer, final String fsVariableDataKeysCommaSeparatedString, final String fsVariableDataValuesCommaSeparatedString, final String fsCallbackSucces, final String fsCallbackError)
     {
         HashMap<String, String> variableData = null;
 
@@ -312,7 +312,12 @@ public class PrintConnectWindevMobileFacade {
 
         final HashMap<String, String> fVariableData = variableData;
 
-        final PC_E_FILEMODE feFileMode = PC_E_FILEMODE.getFileMode(fsFileMode);
+        // Dans le cas de Windev, on utilise que le mode File_System emulé
+        // la version d'origine nécessite que l'on pré-configure PrintConnect
+        // pour utiliser un dossier local
+        // la configuration se faisant manuellement, le mieux reste de
+        // forcer le mode
+        final PC_E_FILEMODE feFileMode = PC_E_FILEMODE.FILE_SYSTEM;
 
         PCTemplateFileNamePrint templateFileNamePrint = new PCTemplateFileNamePrint(getActivity());
 
